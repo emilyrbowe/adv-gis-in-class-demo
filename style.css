@@ -1,0 +1,129 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Proxima Nova;
+  color: #005580;
+  font-size: 16px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.map-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#map {
+  position: absolute;
+  height: 100%;
+  width: 75%;
+}
+
+/*
+ * We position the sidebar to the right by using float and setting the width
+ * to 100% - the width of the map, in this case 100% - 75% = 25%
+ */
+.sidebar {
+  background: rgba(0, 85, 128, .2);
+  float: right;
+  height: 100vh;
+  padding: 10px;
+  width: 25%;
+}
+
+.sidebar>div {
+  margin: 0px 15px 15px 15px;
+  flex-direction: row;
+}
+
+.sidebar-footer {
+  margin-top: 75px;
+  display: block;
+}
+
+.sidebar-footer a {
+  text-decoration: none;
+  color: #005580;
+}
+
+.sidebar-feature-content {
+  color: red;
+}
+
+.sidebar-feature-content h3{
+  margin: 0px;
+}
+
+#title {
+  color: #005580;
+  font-size: 2.5em;
+  font-weight: 400;
+  line-height: 1em;
+  text-decoration-line: none;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+#explainer {
+  fonts-size: 1.5em;
+}
+
+#filters>ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.buttons {
+/*   position: inline-block; */
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+}
+
+button {
+  display: flex;
+  color: #005580;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 5px;
+  border: 1px solid #005580;
+  width: 100px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.street-button:hover {
+  background-color: #E8D358;
+  color: white;
+}
+
+.park-button:hover {
+  background-color: #70C196;
+  color: white;
+}
+
+.reset-button:hover {
+  background-color: #005580;
+  color: white;
+}
+
+/* .checkboxes {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 100px;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px;
+  font-size: 30px;
+  user-select: none;
+} */
