@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HW 8 - Adv GIS - JS</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    
+    <!-- Load Leaflet CSS -->
+    <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet">
+    
+    <!-- Load our styles -->
+    <link href="./style.css" rel="stylesheet">
+    
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.2.0/carto.min.js"></script>
+    
+    <!-- Load our JavaScript -->
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+<!--
+      We put the map and sidebar in a map-wrapper so they will be positioned
+      and kept together
+    -->
+    <div class="map-wrapper">
+      <div id="map"></div>
+      <div class="sidebar">
+        <div>
+          <h1 id="title">
+          San Antonio
+          <br>
+          2017 Bond Projects
+        </h1>
+        </div>
+        <div id = "explainer">
+          <h3>This map shows the bond projects at work right now and the historical sites (outlined in blue) in the city.</h3>
+        </div>
+        
+        <!-- We create a div where the feature data will go when clicked on: -->
+        <div class="sidebar-feature-content">
+        </div>
+        <div id = "filters">
+          <div>
+            Click on the points on the map to see more information about the bond projects. You can also toggle on and off the various kinds of bond projects.
+          </div>
+          <ul>
+            <li>
+            <input type="checkbox" name="ProjectTypes[]" id="streets" class="streets-checkbox" value="STREETS" checked />
+            <label for="streets">Streets </label>
+          </li>
+          <li>
+            <input type="checkbox" name="ProjectTypes[]" id="parks" class="parks-checkbox" value="PARKS" checked/>
+            <label for="parks">Parks</label>
+          </li>
+          <li>
+            <input type="checkbox" name="ProjectTypes[]" id="libraries" class="libraries-checkbox" value="LIBRARIES" checked/>
+            <label for="libraries">Libraries</label>
+          </li>
+          <li>
+            <input type="checkbox" name="ProjectTypes[]" id="drainage" class="drainage-checkbox" value="DRAINAGE" checked/>
+            <label for="drainage">Drainage</label>
+          </li>
+          <li>
+            <input type="checkbox" name="ProjectTypes[]" id="law" class="law-checkbox" value="LAW ENFORCEMENT" checked/>
+            <label for="law">Law Enforcement</label>
+          </li>
+          <li>
+            <input type="checkbox" name="ProjectTypes[]" id="fire" class="fire-checkbox" value="FIRE PROTECTION" checked/>
+            <label for="fire">Fire Protection</label>
+          </li>
+          </ul>
+        </div>
+        <div class="buttons">
+          <button class="reset-button">
+              Reset
+          </button>
+        </div>
+        <div class="sidebar-footer">
+          Data from <a href="https://data.sanantonio.gov/group/geospatial"><b>San Antonio Open Data Portal</b></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
